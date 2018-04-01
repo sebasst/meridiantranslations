@@ -9,9 +9,9 @@ import { ServicesComponent } from './components/services/services.component';
 import { HomeComponent } from './components/home/home.component';
 import {app_routing} from './app.routes';
 import { WINDOW_PROVIDERS} from './services/scrollWindow.service';
-import { WhyUsComponent } from './why-us/why-us.component';
-import { ClientTestimonialsComponent } from './client-testimonials/client-testimonials.component';
-import { OwlCarouselComponent } from './owl-carousel/owl-carousel.component';
+import { WhyUsComponent } from './components/why-us/why-us.component';
+import { ClientTestimonialsComponent } from './components/client-testimonials/client-testimonials.component';
+
 
 
 @NgModule({
@@ -23,7 +23,6 @@ import { OwlCarouselComponent } from './owl-carousel/owl-carousel.component';
     HomeComponent,
     WhyUsComponent,
     ClientTestimonialsComponent,
-    OwlCarouselComponent
   ],
   imports: [
     BrowserModule,
