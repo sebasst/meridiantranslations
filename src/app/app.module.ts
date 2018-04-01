@@ -11,6 +11,9 @@ import {app_routing} from './app.routes';
 import { WINDOW_PROVIDERS} from './services/scrollWindow.service';
 import { WhyUsComponent } from './components/why-us/why-us.component';
 import { ClientTestimonialsComponent } from './components/client-testimonials/client-testimonials.component';
+import {AlertModule, BsDropdownModule, CarouselModule} from 'ngx-bootstrap';
+import { TesterComponent } from './components/tester/tester.component';
+import { ClientsComponent } from './components/clients/clients.component';
 
 
 
@@ -23,8 +26,12 @@ import { ClientTestimonialsComponent } from './components/client-testimonials/cl
     HomeComponent,
     WhyUsComponent,
     ClientTestimonialsComponent,
+    TesterComponent,
+    ClientsComponent,
   ],
   imports: [
+    BsDropdownModule.forRoot(),
+    AlertModule.forRoot(),CarouselModule.forRoot(),
     BrowserModule,
     app_routing
   ],
