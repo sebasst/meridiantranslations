@@ -848,6 +848,9 @@ blockquote p {
 .bg-10 {
   background-image: url(../images/intro/10.jpg); }
 
+.bg-translatioin-bridge {
+  background-image: url(../images/intro/translation-bridge_.jpg); }
+
 .header-classic {
   display: block;
   height: auto;
@@ -1403,8 +1406,17 @@ blockquote p {
       .services .service {
         padding: 2px;
         margin-bottom: 40px; } }
-    .services .service .service-icon span {
-      font-size: 4em; }
+    .services .service .service-icon {
+      display: block;
+      margin: 0 auto;
+      width: 100px;
+      height: 120px;
+    }
+      .services .service .service-icon img{
+
+        width: 100%;
+        height: auto;
+      }
   .services .section-content .secondrow .service {
     margin-bottom: 0; }
     @media only screen and (max-width: 767px) {
@@ -1883,6 +1895,13 @@ blockquote p {
     left: 0; }
   .why-choose-us .why-explain.bottom::before {
     left: 0; }
+  .why-choose-us .why-explain-img{
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    height: 120px;
+  }
+
 @media only screen and (max-width: 767px) {
   .why-choose-us h4 {
     margin-bottom: 10px; }
