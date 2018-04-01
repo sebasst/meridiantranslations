@@ -11,6 +11,7 @@ import {app_routing} from './app.routes';
 import { WINDOW_PROVIDERS} from './services/scrollWindow.service';
 import { WhyUsComponent } from './why-us/why-us.component';
 import { ClientTestimonialsComponent } from './client-testimonials/client-testimonials.component';
+import { OwlCarouselComponent } from './owl-carousel/owl-carousel.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { ClientTestimonialsComponent } from './client-testimonials/client-testim
     ServicesComponent,
     HomeComponent,
     WhyUsComponent,
-    ClientTestimonialsComponent
+    ClientTestimonialsComponent,
+    OwlCarouselComponent
   ],
   imports: [
     BrowserModule,
