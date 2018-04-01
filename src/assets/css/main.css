@@ -1318,7 +1318,8 @@ blockquote p {
     font-size: 100px;
     font-weight: 100;
     font-style: italic;
-    z-index: -1; }
+    z-index: -1;
+  }
     .testimonial .quote.left {
       line-height: 100%;
       top: 25px;
@@ -1899,8 +1900,7 @@ blockquote p {
     display: block;
     margin: 0 auto;
     width: 100px;
-    height: 120px;
-  }
+    height: 120px; }
 
 @media only screen and (max-width: 767px) {
   .why-choose-us h4 {

@@ -1945,39 +1945,39 @@ $('#subscription-form').submit(function(e) {
 /*------------------------------------------
  Testimonial carousel
  ------------------------------------------*/
-
-(function () {
-
-    var $testimonialCarousel = $("#testimonials-carousel"),
-        $reviews = $(".review"),
-        $clientFace = $("#clientFace");
-
-    $testimonialCarousel.owlCarousel({
-        singleItem: true,
-        autoPlay: true,
-        pagination: false,
-        autoHeight: true,
-        beforeMove: function(parm){
-            var owl = $testimonialCarousel.data('owlCarousel');
-            var image = $reviews[owl.currentItem];
-            image = $(image).data('client-image');
-            //console.log(image);
-            $clientFace.css('background-image', 'url('+image+')');
-
-        }
-
-    });
-
-    $('.carosel-wrapper .prev').click(function(e){
-        e.preventDefault();
-        $testimonialCarousel.trigger('owl.prev');
-    });
-    $('.carosel-wrapper .next').click(function(e){
-        e.preventDefault();
-        $testimonialCarousel.trigger('owl.next');
-    });
-
-})();
+//
+// (function () {
+//
+//     var $testimonialCarousel = $("#testimonials-carousel"),
+//         $reviews = $(".review"),
+//         $clientFace = $("#clientFace");
+//
+//     $testimonialCarousel.owlCarousel({
+//         singleItem: true,
+//         autoPlay: true,
+//         pagination: false,
+//         autoHeight: true,
+//         beforeMove: function(parm){
+//             var owl = $testimonialCarousel.data('owlCarousel');
+//             var image = $reviews[owl.currentItem];
+//             // image = $(image).data('client-image');
+//             //console.log(image);
+//             // $clientFace.css('background-image', 'url('+image+')');
+//
+//         }
+//
+//     });
+//
+//     $('.carosel-wrapper .prev').click(function(e){
+//         e.preventDefault();
+//         $testimonialCarousel.trigger('owl.prev');
+//     });
+//     $('.carosel-wrapper .next').click(function(e){
+//         e.preventDefault();
+//         $testimonialCarousel.trigger('owl.next');
+//     });
+//
+// })();
 /*------------------------------------------
  Video Player
  ------------------------------------------*/
