@@ -14,6 +14,7 @@ import { ClientTestimonialsComponent } from './components/client-testimonials/cl
 import {AlertModule, BsDropdownModule, CarouselModule} from 'ngx-bootstrap';
 import { TesterComponent } from './components/tester/tester.component';
 import { ClientsComponent } from './components/clients/clients.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 
 
@@ -28,6 +29,7 @@ import { ClientsComponent } from './components/clients/clients.component';
     ClientTestimonialsComponent,
     TesterComponent,
     ClientsComponent,
+    ProfileComponent,
   ],
   imports: [
     BsDropdownModule.forRoot(),
