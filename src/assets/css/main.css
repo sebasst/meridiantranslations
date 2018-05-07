@@ -2921,6 +2921,7 @@ blockquote p {
   margin-bottom: 10px;
   float: right;
   margin-left: 40px;
+  overflow: hidden;
 }
 
 @media only screen and (max-width: 767px) {

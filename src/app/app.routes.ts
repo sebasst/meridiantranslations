@@ -4,13 +4,18 @@
 import {RouterModule, Routes} from "@angular/router";
 import {HomeComponent} from "./components/home/home.component";
 import {ServicesComponent} from "./components/services/services.component";
+import {ServicesdetailsComponent} from "./components/servicesdetails/servicesdetails.component";
+import {InterpretationServicesComponent} from "./components/interpretation-services/interpretation-services.component";
+import {OtherServicesComponent} from "./components/other-services/other-services.component";
 
 
 
 
 const appRoutes: Routes = [
   {path: '', component: HomeComponent},
-  {path: 'services', component: ServicesComponent},
+  {path: 'services', component: ServicesdetailsComponent},
+  {path: 'interpretation', component: InterpretationServicesComponent},
+  {path: 'otherServices', component: OtherServicesComponent},
   {path: '**', pathMatch: 'full', redirectTo: ''}
 ]
 
