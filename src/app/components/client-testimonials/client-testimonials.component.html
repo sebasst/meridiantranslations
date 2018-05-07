@@ -1,0 +1,92 @@
+<!-- Testimonial -->
+<section id="testimonial" class="section overlay-1 testimonial bg-image dark-bg">
+
+  <div class="color-overlay" ></div>
+  <div class="container">
+    <header class="section-heading" >
+      <h2>tESTIMONIOS DE NUESTROS CLIENTES</h2>
+      <span>Mira lo que nuestros clientes dicen de nosotros</span>
+    </header>
+
+    <div class="section-content">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <!-- Wrapper for slides -->
+          <div class="carosel-wrapper">
+
+            <!--<div class="client-face-holder">-->
+            <!--<div id="clientFace"></div>-->
+            <!--</div>-->
+
+            <div class="quote left">&ldquo;</div>
+            <div class="quote right">&rdquo;</div>
+
+            <div id="testimonials-carousel" class="owl-carousel owl-theme" style="opacity: 1; display: block;">
+              <carousel [showIndicators]="false" #carusel>
+                <slide>
+                  <div class="item" style="">
+                    <div class="review" data-client-image="assets/images/team/team-1.jpg" >
+                      <blockquote>
+                        Recomiendo muchísimo a Salomé. Ella posee la extraordinaria combinación de magníficas
+                        habilidades de traducción y un excelente don de gente. Se adaptó perfectamente y de manera
+                        inmediata a nuestro grupo de líderes ejecutivos y se convirtió en parte del equipo, y así nos
+                        ayudó a cumplir con los objetivos de la visita. Espero tener el privilegio de volver a trabajar
+                        con ella en futuro.
+                      </blockquote>
+                      <h4 class="reviewer">Marka Konrad</h4>
+                      <p class="designation">Visión Mundial Canadá</p>
+                    </div>
+                  </div>
+                </slide>
+                <slide>
+                  <div class="item">
+                    <div class="review" data-client-image="assets/images/team/team-1.jpg">
+                      <blockquote>
+                        Recibí los servicios de traducción al inglés de Salomé Salazar en escritos que necesitaba enviar
+                        para mi aplicación a la Universidad de Saskatchewan, Canadá. Su trabajo fue apropiado desde el
+                        primer instante, me sorprendió gratamente la forma en que realiza su trabajo y cómo se ajusta a
+                        lo que desean sus cliente
+                      </blockquote>
+                      <h4 class="reviewer">Daniel Achig</h4>
+                      <p class="designation">Comunicador Audiovisual</p>
+                    </div>
+                  </div>
+                </slide>
+                <slide>
+                  <div class="item">
+                    <div class="review" data-client-image="assets/images/team/team-1.jpg">
+                      <blockquote>
+                        Agradecemos mucho por la disposición, excelente tu desempeño y corazón colocado en por parte de
+                        la Intérprete Salomé Salazar. Hemos recibido felicitaciones por parte de la delegación
+                        canadiense por haberla contratado ya que ha sido además de intérprete, una persona con don de
+                        gente, paciencia, adaptabilidad y amabilidad para sumarse a nuestro equipo.
+                      </blockquote>
+                      <h4 class="reviewer">Daniela Herrera</h4>
+                      <p class="designation">WV Ecuador</p>
+                    </div>
+                  </div>
+                </slide>
+
+              </carousel>
+
+            </div>
+
+            <!-- Controls -->
+            <div class="owl-controls left carousel-control-prev">
+              <a class="prev left carousel-control-prev" (click)="previousSlide()" role="button">
+                <i class="ion-ios-arrow-left"></i>
+                <span class="sr-only">Previous</span>
+              </a>
+
+              <a class="next" role="button" data-slide="next" (click)="nextSlide()">
+                <i class="ion-ios-arrow-right"></i>
+                <span class="sr-only">Next</span>
+              </a>
+            </div><!--/owl-controls-->
+
+          </div><!-- carosel-wrapper -->
+        </div><!--/col-->
+      </div><!-- row -->
+    </div><!-- section-content -->
+  </div><!-- container -->
+</section>
