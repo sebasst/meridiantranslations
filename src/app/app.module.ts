@@ -20,6 +20,7 @@ import {FormsModule} from "@angular/forms";
 import { ServicesdetailsComponent } from './components/servicesdetails/servicesdetails.component';
 import { InterpretationServicesComponent } from './components/interpretation-services/interpretation-services.component';
 import { OtherServicesComponent } from './components/other-services/other-services.component';
+import { LandPageComponent } from './components/land-page/land-page.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { OtherServicesComponent } from './components/other-services/other-servic
     ContactusComponent,
     ServicesdetailsComponent,
     InterpretationServicesComponent,
-    OtherServicesComponent
+    OtherServicesComponent,
+    LandPageComponent
   ],
   imports: [
     BsDropdownModule.forRoot(),

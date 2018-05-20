@@ -7,12 +7,13 @@ import {ServicesComponent} from "./components/services/services.component";
 import {ServicesdetailsComponent} from "./components/servicesdetails/servicesdetails.component";
 import {InterpretationServicesComponent} from "./components/interpretation-services/interpretation-services.component";
 import {OtherServicesComponent} from "./components/other-services/other-services.component";
+import {LandPageComponent} from "./components/land-page/land-page.component";
 
 
 
 
 const appRoutes: Routes = [
-  {path: '', component: HomeComponent},
+  {path: '', component: LandPageComponent},
   {path: 'services', component: ServicesdetailsComponent},
   {path: 'interpretation', component: InterpretationServicesComponent},
   {path: 'otherServices', component: OtherServicesComponent},
