@@ -15,113 +15,136 @@
           <div class="row contact-info-wrap">
             <div class="col-sm-9">
               <div>
-              <h5>Información de contacto:</h5>
-              <div class="contact-info">
-                  <span><img style="height: 60px;" src="../../../assets/images/socialNetworks/email.png"/>&nbsp;&nbsp;
+                <h5>Información de contacto:</h5>
+                <div class="contact-info">
+                  <span><img style="height: 40px;" src="../../../assets/images/socialNetworks/email.png"/>&nbsp;&nbsp;
                   <a style="font-size: medium; color: black;" href="mailto:info@meridiantranslations.com">info@meridiantranslations.com</a></span>
+                </div>
+                <br>
+                <div class="contact-info">
+                  <span><img style="height: 40px;" src="../../../assets/images/socialNetworks/phone.png"/></span>&nbsp;&nbsp;
+                  <span><a style="font-size: medium; color: black;"
+                           href="tel:+593-99-657-59-65">+593 99 657 59 65</a></span>
+                </div>
               </div>
-              <br>
-              <div class="contact-info">
-                <span><img style="height: 60px;" src="../../../assets/images/socialNetworks/phone.png"/></span>&nbsp;&nbsp;
-                <span><a style="font-size: medium; color: black;"
-                         href="tel:+593-99-657-59-65">+593 99 657 59 65</a></span>
-              </div>
+
             </div>
 
-        </div>
+          </div>
+          <div class="row contact-info-wrap">
+            <div class="col-sm-6">
+              <h5>Redes Sociales</h5>
+              <div>
+                <a href="https://www.facebook.com/meridiantranslations/" target="_blank"><img style="height: 50px;"
+                                                                                              src="../../../assets/images/socialNetworks/facebook.png"/></a>
+              </div>
+              <br>
+              <div>
+                <a href="https://twitter.com/salomesalazart" target="_blank"><img style="height: 50px;"
+                                                                                  src="../../../assets/images/socialNetworks/twitter.png"/></a>
+              </div>
+              <br>
+              <div>
+                <a href="https://www.linkedin.com/in/salome-salazar-m-a-97269148/" target="_blank"><img
+                  style="height: 50px;" src="../../../assets/images/socialNetworks/linked.png"/></a>
+              </div>
+            </div>
+          </div>
 
+
+        </div>
+        <!--<div class="col-md-6 col-sm-5">-->
+          <!--<h5>Formulario de contacto</h5>-->
+          <!--<form #contactForm="ngForm" (ngSubmit)="onSubmit()" class="contact-form">-->
+
+            <!--<div class="form-group">-->
+              <!--<input class="form-control" id="name" [(ngModel)]="model.name" name="name" placeholder="Nombre*" type="text" required #name="ngModel">-->
+              <!--<div [hidden]="name.valid || name.pristine"-->
+                   <!--class="alert alert-danger">-->
+                <!--Por favor ingrese su nombre-->
+              <!--</div>-->
+            <!--</div>-->
+
+
+            <!--<div class="form-group">-->
+              <!--<input class="form-control" id="lastname" [(ngModel)]="model.lasName"  name="lastname" placeholder="Apellido*" type="text" required #lastname="ngModel">-->
+              <!--<div [hidden]="lastname.valid || lastname.pristine"-->
+                   <!--class="alert alert-danger">-->
+                <!--Por favor ingrese su apellido-->
+              <!--</div>-->
+            <!--</div>-->
+
+            <!--<div class="form-group">-->
+              <!--<input class="form-control" id="email" [(ngModel)]="model.email"  name="email" placeholder="Correo*" type="email" required #email="ngModel">-->
+              <!--<div [hidden]="email.valid || email.pristine"-->
+                   <!--class="alert alert-danger">-->
+                <!--Por favor ingrese su correo electrónico-->
+              <!--</div>-->
+            <!--</div>-->
+
+            <!--<div class="form-group">-->
+              <!--<input class="form-control" id="phone" [(ngModel)]="model.phone" name="phone" placeholder="Teléfono" type="text" >-->
+            <!--</div>-->
+            <!--<div class="form-group">-->
+              <!--<input class="form-control" id="business" [(ngModel)]="model.business" name="bssiness" placeholder="Empresa" type="text" >-->
+            <!--</div>-->
+            <!--<div class="form-group">-->
+              <!--<input class="form-control" id="country" [(ngModel)]="model.country"  name="country" placeholder="País" type="text" required #country="ngModel">-->
+              <!--<div [hidden]="country.valid || country.pristine"-->
+                   <!--class="alert alert-danger">-->
+                <!--Por favor ingrese su país-->
+              <!--</div>-->
+            <!--</div>-->
+
+            <!--<div class="form-group">-->
+              <!--<select class="form-control " id="service" required name="service"[(ngModel)]="model.service" #service="ngModel" >-->
+                <!--<option value="" disabled selected>Servicio requerido...</option>-->
+                <!--<option value="Traduccion">Traducción</option>-->
+                <!--<option value="Interpretacion">Interpretación</option>-->
+                <!--<option value="Otros">Otros servicios</option>-->
+              <!--</select>-->
+              <!--<div [hidden]="service.valid || service.pristine"-->
+                   <!--class="alert alert-danger">-->
+                <!--Por favor ingrese el servicio que requiere-->
+              <!--</div>-->
+            <!--</div>-->
+
+            <!--<div class="form-group custom-control custom-checkbox custom-control-inline">-->
+              <!--<label style="font-weight: normal;">Idiomas: </label>-->
+
+              <!--<fieldset style="text-align: right" id="languages" name="languages" >-->
+
+                <!--<input type="checkbox" name="ingles" [(ngModel)]="model.ingles" value="ingles" class="custom-control-label"/>Inglés-->
+                <!--<input type="checkbox" name="frances" [(ngModel)]="model.frances" value="frances" class="custom-control-label"/>Francés-->
+                <!--<input type="checkbox" name="espaniol" [(ngModel)]="model.espaniol"  value="espaniol" class="custom-control-label"/>Español-->
+              <!--</fieldset>-->
+
+            <!--</div>-->
+
+            <!--<div class="form-group">-->
+              <!--<select class="form-control " id="howContact" name="howContact" required [(ngModel)]="model.howContact" >-->
+                <!--<option value="" disabled selected>¿Cómo te enteraste de MT?</option>-->
+                <!--<option value="recomendado">Alguien me recomendó</option>-->
+                <!--<option value="redes">Redes Sociales</option>-->
+                <!--<option value="cliente">Ya soy cliente</option>-->
+                <!--<option value="otro">Otro</option>-->
+              <!--</select>-->
+
+            <!--</div>-->
+
+
+            <!--<div class="form-group">-->
+              <!--<textarea class="form-control" id="message" name="massage" placeholder="Detalles de tu pedido" rows="5"-->
+                        <!--required></textarea>-->
+            <!--</div>-->
+
+            <!--<div id="contactFormResponse"></div>-->
+            <!--<button type="submit" class="btn btn-success" [disabled]="!contactForm.form.valid">Enviar</button>-->
+
+          <!--</form>-->
+        <!--</div>-->
       </div>
-      <div class="row contact-info-wrap">
-        <div class="col-sm-6">
-          <h5>Redes Sociales</h5>
-          <div>
-            <a href="https://www.facebook.com/meridiantranslations/" target="_blank"><img style="height: 70px;"
-                                                                                          src="../../../assets/images/socialNetworks/facebook.png"/></a>
-          </div>
-          <br>
-          <div>
-            <a href="https://twitter.com/salomesalazart" target="_blank"><img style="height: 70px;"
-                                                                              src="../../../assets/images/socialNetworks/twitter.png"/></a>
-          </div>
-          <br>
-          <div>
-            <a href="https://www.linkedin.com/in/salome-salazar-m-a-97269148/" target="_blank"><img
-              style="height: 70px;" src="../../../assets/images/socialNetworks/linked.png"/></a>
-          </div>
-        </div>
-      </div>
-
-
     </div>
-    <div class="col-md-6 col-sm-5">
-      <h5>Formulario de contacto</h5>
-      <form class="contact-form">
-
-        <div class="form-group">
-          <input class="form-control" id="name" name="name" placeholder="Nombre" type="text" required>
-        </div>
-
-        <div class="form-group">
-          <input class="form-control" id="lastname" name="lastname" placeholder="Apellido" type="text" required>
-        </div>
-
-        <div class="form-group">
-          <input class="form-control" id="email" name="email" placeholder="Correo" type="email" required>
-        </div>
-
-        <div class="form-group">
-          <input class="form-control" id="phone" name="phone" placeholder="Teléfono" type="text" required>
-        </div>
-        <div class="form-group">
-          <input class="form-control" id="bussiness" name="bussiness" placeholder="Empresa" type="text" required>
-        </div>
-        <div class="form-group">
-          <input class="form-control" id="country" name="country" placeholder="País" type="text" required>
-        </div>
-
-        <div class="form-group">
-          <select class="form-control " id="servicio" required>
-            <option value="" disabled selected>Servicio requerido...</option>
-            <option value="Traduccion">Traducción</option>
-            <option value="Interpretacion">Interpretación</option>
-            <option value="Otros">Otros servicios</option>
-          </select>
-        </div>
-
-        <div class="form-group custom-control custom-checkbox custom-control-inline">
-          <label style="font-weight: normal;">Idiomas: </label>
-
-          <fieldset style="text-align: right">
-
-            <input type="checkbox" name="animal" value="ingles" class="custom-control-label"/>Inglés
-            <input type="checkbox" name="animal" value="frances" class="custom-control-label"/>Francés
-            <input type="checkbox" name="animal" value="espaniol" class="custom-control-label"/>Español
-          </fieldset>
-        </div>
-
-        <div class="form-group">
-          <select class="form-control " id="howarrived" required>
-            <option value="" disabled selected>¿Cómo te enteraste de MT?</option>
-            <option value="recomendado">Alguien me recomendó</option>
-            <option value="redes">Redes Sociales</option>
-            <option value="cliente">Ya soy cliente</option>
-            <option value="otro">Otro</option>
-          </select>
-        </div>
-
-
-        <div class="form-group">
-              <textarea class="form-control" id="message" name="massage" placeholder="Detalles de tu pedido" rows="5"
-                        required></textarea>
-        </div>
-
-        <div id="contactFormResponse"></div>
-
-
-      </form>
-    </div>
-  </div>
-  </div>
 
   </div>
 </section>

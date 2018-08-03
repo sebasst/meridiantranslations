@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {GetStylesService} from "../../services/get-styles.service";
 
 @Component({
   selector: 'app-land-page',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private getStyleService: GetStylesService) {
+    getStyleService.setScrolled(false);
+  }
 
   ngOnInit() {
+
   }
 
 }

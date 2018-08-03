@@ -21,6 +21,8 @@ import { ServicesdetailsComponent } from './components/servicesdetails/servicesd
 import { InterpretationServicesComponent } from './components/interpretation-services/interpretation-services.component';
 import { OtherServicesComponent } from './components/other-services/other-services.component';
 import { LandPageComponent } from './components/land-page/land-page.component';
+import { AllServicesComponent } from './components/all-services/all-services.component';
+import {GetStylesService} from "./services/get-styles.service";
 
 
 @NgModule({
@@ -39,7 +41,8 @@ import { LandPageComponent } from './components/land-page/land-page.component';
     ServicesdetailsComponent,
     InterpretationServicesComponent,
     OtherServicesComponent,
-    LandPageComponent
+    LandPageComponent,
+    AllServicesComponent
   ],
   imports: [
     BsDropdownModule.forRoot(),
@@ -48,7 +51,7 @@ import { LandPageComponent } from './components/land-page/land-page.component';
     app_routing,
     FormsModule
   ],
-  providers: [WINDOW_PROVIDERS],
+  providers: [WINDOW_PROVIDERS, GetStylesService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

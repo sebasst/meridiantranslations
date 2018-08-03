@@ -8,12 +8,14 @@ import {ServicesdetailsComponent} from "./components/servicesdetails/servicesdet
 import {InterpretationServicesComponent} from "./components/interpretation-services/interpretation-services.component";
 import {OtherServicesComponent} from "./components/other-services/other-services.component";
 import {LandPageComponent} from "./components/land-page/land-page.component";
+import {AllServicesComponent} from "./components/all-services/all-services.component";
 
 
 
 
 const appRoutes: Routes = [
   {path: '', component: LandPageComponent},
+  {path: 'allservices', component: AllServicesComponent},
   {path: 'services', component: ServicesdetailsComponent},
   {path: 'interpretation', component: InterpretationServicesComponent},
   {path: 'otherServices', component: OtherServicesComponent},

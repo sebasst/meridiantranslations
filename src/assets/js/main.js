@@ -1231,7 +1231,7 @@ $(document).ready(function () {
 	console.log($nav)
     function navbarAnimation() {
         if ($(window).scrollTop() > 0) {
-          console.log("chc2")
+
         	$nav.addClass('navbar-solid');
         	return;
         }
@@ -1245,7 +1245,7 @@ $(document).ready(function () {
     navbarAnimation();
 
     $(window).scroll(function() {
-      console.log("chc1")
+
 		navbarAnimation();
 	});
 
