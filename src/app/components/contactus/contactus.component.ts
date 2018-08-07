@@ -1,5 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {ConstacModel} from '../../models/constac-model';
+import {ContactEmailService} from '../../services/contact-email.service';
+import {NgForm} from "@angular/forms";
+import {AlertComponent} from "ngx-bootstrap";
 
 @Component({
   selector: 'app-contactus',
@@ -19,8 +22,23 @@ import {ConstacModel} from '../../models/constac-model';
   `]
 })
 export class ContactusComponent implements OnInit {
+  alerts: any[] = [{
+    type: 'success',
+    msg: `Well done! You successfully read this important alert message. (added: ${new Date().toLocaleTimeString()})`,
+    timeout: 5000
+  }];
 
+  add(): void {
+    this.alerts.push({
+      type: 'success',
+      msg: 'Gracias por su interés, pronto nos contactaremos!!',
+      timeout: 5000
+    });
+  }
 
+  onClosed(dismissedAlert: AlertComponent): void {
+    this.alerts = this.alerts.filter(alert => alert !== dismissedAlert);
+  }
 
   services = [
     'Traducción',
@@ -39,27 +57,41 @@ export class ContactusComponent implements OnInit {
   model = new ConstacModel();
 
 
-  constructor() {
+  constructor(public contactEmailService: ContactEmailService) {
   }
 
   ngOnInit() {
   }
 
-  onSubmit() {
+  onSubmit(form: NgForm) {
     this
       .submitted = true;
     console
       .log(
         'submitedxxxxx'
       );
+    /*
     console
       .log(this
 
         .diagnostic()
       );
+*/
+    try {
+      this.contactEmailService.sendContactForm(this.model).subscribe(resp => {
+          console.log(resp, 'res');
+          form.reset();
+          this.add();
+        },
+        error => {
+          console.log(error, 'error');
+        });
+    } catch (e) {
+      console.log(e);
+
+    }
 
   }
-
 
 
 // TODO: Remove this when we're done

@@ -23,6 +23,8 @@ import { OtherServicesComponent } from './components/other-services/other-servic
 import { LandPageComponent } from './components/land-page/land-page.component';
 import { AllServicesComponent } from './components/all-services/all-services.component';
 import {GetStylesService} from "./services/get-styles.service";
+import {ContactEmailService} from "./services/contact-email.service";
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -49,9 +51,10 @@ import {GetStylesService} from "./services/get-styles.service";
     AlertModule.forRoot(), CarouselModule.forRoot(),
     BrowserModule,
     app_routing,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [WINDOW_PROVIDERS, GetStylesService],
+  providers: [WINDOW_PROVIDERS, GetStylesService, ContactEmailService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

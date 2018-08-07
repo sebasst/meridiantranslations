@@ -1,7 +1,7 @@
 export class ConstacModel {
 
   public name: string;
-  public lasName: string;
+  public lastName: string;
   public phone: string;
   public email: string;
   public business: string;

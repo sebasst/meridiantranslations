@@ -53,96 +53,119 @@
 
 
         </div>
-        <!--<div class="col-md-6 col-sm-5">-->
-          <!--<h5>Formulario de contacto</h5>-->
-          <!--<form #contactForm="ngForm" (ngSubmit)="onSubmit()" class="contact-form">-->
+        <div class="col-md-6 col-sm-5">
+          <h5>Formulario de contacto</h5>
+          <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)" class="contact-form">
 
-            <!--<div class="form-group">-->
-              <!--<input class="form-control" id="name" [(ngModel)]="model.name" name="name" placeholder="Nombre*" type="text" required #name="ngModel">-->
-              <!--<div [hidden]="name.valid || name.pristine"-->
-                   <!--class="alert alert-danger">-->
-                <!--Por favor ingrese su nombre-->
-              <!--</div>-->
-            <!--</div>-->
-
-
-            <!--<div class="form-group">-->
-              <!--<input class="form-control" id="lastname" [(ngModel)]="model.lasName"  name="lastname" placeholder="Apellido*" type="text" required #lastname="ngModel">-->
-              <!--<div [hidden]="lastname.valid || lastname.pristine"-->
-                   <!--class="alert alert-danger">-->
-                <!--Por favor ingrese su apellido-->
-              <!--</div>-->
-            <!--</div>-->
-
-            <!--<div class="form-group">-->
-              <!--<input class="form-control" id="email" [(ngModel)]="model.email"  name="email" placeholder="Correo*" type="email" required #email="ngModel">-->
-              <!--<div [hidden]="email.valid || email.pristine"-->
-                   <!--class="alert alert-danger">-->
-                <!--Por favor ingrese su correo electrónico-->
-              <!--</div>-->
-            <!--</div>-->
-
-            <!--<div class="form-group">-->
-              <!--<input class="form-control" id="phone" [(ngModel)]="model.phone" name="phone" placeholder="Teléfono" type="text" >-->
-            <!--</div>-->
-            <!--<div class="form-group">-->
-              <!--<input class="form-control" id="business" [(ngModel)]="model.business" name="bssiness" placeholder="Empresa" type="text" >-->
-            <!--</div>-->
-            <!--<div class="form-group">-->
-              <!--<input class="form-control" id="country" [(ngModel)]="model.country"  name="country" placeholder="País" type="text" required #country="ngModel">-->
-              <!--<div [hidden]="country.valid || country.pristine"-->
-                   <!--class="alert alert-danger">-->
-                <!--Por favor ingrese su país-->
-              <!--</div>-->
-            <!--</div>-->
-
-            <!--<div class="form-group">-->
-              <!--<select class="form-control " id="service" required name="service"[(ngModel)]="model.service" #service="ngModel" >-->
-                <!--<option value="" disabled selected>Servicio requerido...</option>-->
-                <!--<option value="Traduccion">Traducción</option>-->
-                <!--<option value="Interpretacion">Interpretación</option>-->
-                <!--<option value="Otros">Otros servicios</option>-->
-              <!--</select>-->
-              <!--<div [hidden]="service.valid || service.pristine"-->
-                   <!--class="alert alert-danger">-->
-                <!--Por favor ingrese el servicio que requiere-->
-              <!--</div>-->
-            <!--</div>-->
-
-            <!--<div class="form-group custom-control custom-checkbox custom-control-inline">-->
-              <!--<label style="font-weight: normal;">Idiomas: </label>-->
-
-              <!--<fieldset style="text-align: right" id="languages" name="languages" >-->
-
-                <!--<input type="checkbox" name="ingles" [(ngModel)]="model.ingles" value="ingles" class="custom-control-label"/>Inglés-->
-                <!--<input type="checkbox" name="frances" [(ngModel)]="model.frances" value="frances" class="custom-control-label"/>Francés-->
-                <!--<input type="checkbox" name="espaniol" [(ngModel)]="model.espaniol"  value="espaniol" class="custom-control-label"/>Español-->
-              <!--</fieldset>-->
-
-            <!--</div>-->
-
-            <!--<div class="form-group">-->
-              <!--<select class="form-control " id="howContact" name="howContact" required [(ngModel)]="model.howContact" >-->
-                <!--<option value="" disabled selected>¿Cómo te enteraste de MT?</option>-->
-                <!--<option value="recomendado">Alguien me recomendó</option>-->
-                <!--<option value="redes">Redes Sociales</option>-->
-                <!--<option value="cliente">Ya soy cliente</option>-->
-                <!--<option value="otro">Otro</option>-->
-              <!--</select>-->
-
-            <!--</div>-->
+            <div class="form-group">
+              <input class="form-control" id="name" [(ngModel)]="model.name" name="name" placeholder="Nombre*"
+                     type="text" required #name="ngModel">
+              <div [hidden]="name.valid ||(name.valid || name.pristine) &&!(name.touched)"
+                   class="alert alert-danger">
+                Por favor ingresa tu nombre
+              </div>
+            </div>
 
 
-            <!--<div class="form-group">-->
-              <!--<textarea class="form-control" id="message" name="massage" placeholder="Detalles de tu pedido" rows="5"-->
-                        <!--required></textarea>-->
-            <!--</div>-->
+            <div class="form-group">
+              <input class="form-control" id="lastname" [(ngModel)]="model.lastName" name="lastname"
+                     placeholder="Apellido*" type="text" required #lastname="ngModel">
+              <div [hidden]="lastname.valid ||(lastname.valid || lastname.pristine) &&!(lastname.touched)"
+                   class="alert alert-danger">
+                Por favor ingresa tu apellido
+              </div>
+            </div>
 
-            <!--<div id="contactFormResponse"></div>-->
-            <!--<button type="submit" class="btn btn-success" [disabled]="!contactForm.form.valid">Enviar</button>-->
+            <div class="form-group">
+              <input class="form-control" id="email" [(ngModel)]="model.email" name="email" placeholder="Correo*"
+                     type="email" required #email="ngModel"
+                     pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+              >
 
-          <!--</form>-->
-        <!--</div>-->
+              <div [hidden]="email.valid ||(email.valid || email.pristine) &&!(email.touched)"
+                   class="alert alert-danger">
+                Por favor ingresa una dirección de correo electrónico válida
+              </div>
+            </div>
+
+            <div class="form-group">
+              <input class="form-control" id="phone" [(ngModel)]="model.phone" name="phone" placeholder="Teléfono"
+                     type="text">
+            </div>
+            <div class="form-group">
+              <input class="form-control" id="business" [(ngModel)]="model.business" name="business"
+                     placeholder="Empresa" type="text">
+            </div>
+            <div class="form-group">
+              <input class="form-control" id="country" [(ngModel)]="model.country" name="country" placeholder="País*"
+                     type="text" required #country="ngModel">
+              <div [hidden]="country.valid ||(country.valid || country.pristine) &&!(country.touched)"
+                   class="alert alert-danger">
+                Por favor ingresa tu país de residencia
+              </div>
+            </div>
+
+            <div class="form-group">
+              <select class="form-control " id="service" required name="service" [(ngModel)]="model.service"
+                      #service="ngModel">
+                <option value="" disabled selected>Servicio requerido...</option>
+                <option value="Traduccion">Traducción</option>
+                <option value="Interpretacion">Interpretación</option>
+                <option value="Otros">Otros servicios</option>
+              </select>
+              <div [hidden]="service.valid ||(service.valid || service.pristine) &&!(service.touched)"
+                   class="alert alert-danger">
+                Por favor ingresa el servicio que requieres
+              </div>
+            </div>
+
+            <div class="form-group custom-control custom-checkbox custom-control-inline">
+              <label style="font-weight: normal;">Idiomas: </label>
+
+              <fieldset style="text-align: right" id="languages" name="languages">
+
+                <input type="checkbox" name="ingles" [(ngModel)]="model.ingles" value="ingles"
+                       class="custom-control-label"/>Inglés
+                <input type="checkbox" name="frances" [(ngModel)]="model.frances" value="frances"
+                       class="custom-control-label"/>Francés
+                <input type="checkbox" name="espaniol" [(ngModel)]="model.espaniol" value="espaniol"
+                       class="custom-control-label"/>Español
+              </fieldset>
+
+            </div>
+
+            <div class="form-group">
+              <select class="form-control " id="howContact" name="howContact" required [(ngModel)]="model.howContact">
+                <option value="" disabled selected>¿Cómo te enteraste de MT?</option>
+                <option value="recomendado">Alguien me recomendó</option>
+                <option value="redes">Redes Sociales</option>
+                <option value="cliente">Ya soy cliente</option>
+                <option value="otro">Otro</option>
+              </select>
+
+            </div>
+
+
+            <div class="form-group">
+              <textarea class="form-control" id="message" name="message" [(ngModel)]="model.details"
+                        placeholder="Detalles de tu pedido*" rows="5"
+                        required #message="ngModel"></textarea>
+              <div [hidden]="message.valid ||(message.valid || message.pristine) &&!(message.touched)"
+                   class="alert alert-danger">
+                Por favor ingresa los detalles de tu requerimiento
+              </div>
+            </div>
+
+            <div id="contactFormResponse"></div>
+            <button type="submit" class="btn btn-success" [disabled]="!contactForm.form.valid">Enviar</button>
+            <div *ngFor="let alert of alerts">
+              <alert [type]="alert.type" [dismissOnTimeout]="alert.timeout" (onClosed)="onClosed(alert)">{{ alert.msg
+                }}
+              </alert>
+            </div>
+
+          </form>
+        </div>
       </div>
     </div>
 
